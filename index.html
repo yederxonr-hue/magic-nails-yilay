@@ -128,7 +128,7 @@
 <footer data-block="footer" class="bg-foreground py-10 text-primary-foreground">
  <div class="mx-auto flex max-w-6xl flex-col items-center gap-3 px-5 text-center">
   <p class="font-script text-4xl text-accent">Magic Nails Yilay</p><p class="text-xs uppercase tracking-[.3em] text-primary-foreground/70">Professional Manicure & Pedicure</p>
-  <p class="text-xs text-primary-foreground/60">© 2026 Magic Nails Yilay · <a href="https://www.instagram.com/magic_nailsyilay/" target="_blank" rel="noopener" class="underline">Instagram @magic_nailsyilay</a> · <a href="https://wa.me/584124073692?text=Hola%2C%20quiero%20agendar%20una%20cita%20en%20Magic%20Nails%20Yilay" target="_blank" rel="noopener" class="underline">WhatsApp +58 412-4073692</a></p><p class="text-[10px] text-primary-foreground/50">Música: “Deep House Soul” de Play House (CC0, Free Music Archive)</p>
+  <p class="text-xs text-primary-foreground/60">© 2026 Magic Nails Yilay · <a href="https://www.instagram.com/magic_nailsyilay/" target="_blank" rel="noopener" class="underline">Instagram @magic_nailsyilay</a> · <a href="https://wa.me/584124073692?text=Hola%2C%20quiero%20agendar%20una%20cita%20en%20Magic%20Nails%20Yilay" target="_blank" rel="noopener" class="underline">WhatsApp +58 412-4073692</a></p><p class="text-[10px] text-primary-foreground/50">Música: “Atmospheric House Lounge” de Jonas Dorn (CC0, Open Music Academy)</p>
  </div>
 </footer>
 
@@ -140,7 +140,8 @@
 var off=localStorage.getItem('mny-musica')==='off',on=false;
 function ui(){b.setAttribute('aria-pressed',on);b.setAttribute('aria-label',on?'Silenciar música':'Activar música');t.textContent=on?'Sonido on':'Sonido off';i.textContent=on?'♫':'♪';}
 var ld=null;function load(){if(a.src)return Promise.resolve();if(!ld)ld=fetch('audio/musica-fondo.b64').then(function(r){return r.text()}).then(function(t){var s=atob(t.trim()),u=new Uint8Array(s.length);for(var k=0;k<s.length;k++)u[k]=s.charCodeAt(k);a.src=URL.createObjectURL(new Blob([u],{type:'audio/mpeg'}));});return ld;}
-function play(){a.volume=0.12;load().then(function(){return a.play()}).then(function(){on=true;ui();}).catch(function(){});}
+var fi=null;function fade(){clearInterval(fi);a.volume=0;var st=Date.now();fi=setInterval(function(){var k=Math.min(1,(Date.now()-st)/2000);a.volume=0.12*k;if(k>=1)clearInterval(fi);},50);}
+function play(){fade();load().then(function(){return a.play()}).then(function(){on=true;ui();}).catch(function(){});}
 function stop(){a.pause();on=false;ui();}
 b.addEventListener('click',function(e){e.stopPropagation();if(on){stop();localStorage.setItem('mny-musica','off');off=true;}else{localStorage.removeItem('mny-musica');off=false;play();}});
 function first(){['pointerdown','keydown','touchstart'].forEach(function(ev){removeEventListener(ev,first,true)});if(!off&&!on)play();}

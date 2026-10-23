@@ -1,7 +1,10 @@
-Música de fondo: "Deep House Soul" — Play House
-Fuente: Free Music Archive — https://freemusicarchive.org/music/play-house/single/deep-house-soul/
+Música de fondo: "Atmospheric House Lounge" — Jonas Dorn (2024)
+Fuente: Open Music Academy, colección "CC0 Hintergrundmusik / CC0 Background Music"
+https://openmusic.academy/docs/PhjRHKrMCa9wXaMeFwhQrK/cc0-hintergrundmusik
+Archivo original: https://cdn.openmusic.academy/media-library/atmospheric-house-lounge-N9MYJsF5kfbvDPp8LP9E4S.mp3
 Licencia: CC0 1.0 Universal (dominio público) — https://creativecommons.org/publicdomain/zero/1.0/
-(Verificado en la página de la pista el 2026-10-22: "Deep House Soul by Play House is licensed under a CC0 1.0 Universal License.")
-Archivo: audio/musica-fondo.mp3 (recodificado a 64 kbps desde el original de 256 kbps, 4:43).
+(Verificado el 2026-10-22: la ficha de la pista en esa página indica "CC0"; las etiquetas del mp3 dicen "Open Music Academy CC0-Tracks".)
+Edición: recortado a 37,4 s (se quitó el silencio final) para que el bucle sea continuo; 128 kbps. Fade-in de 2 s hecho por la web al reproducir; volumen 0.12.
 Referencia de estilo pedida (NO usada): "Elegant Soul House | Warm Grooves for Bright Days" — Deephoria Sessions (YouTube 5r7YO1kLqZ0).
-Atribución no requerida; se incluye un crédito en el pie de la web por cortesía.
+Pista anterior reemplazada: "Deep House Soul" — Play House (CC0, FMA).
+Atribución no requerida; se incluye un crédito de cortesía en el pie de la web.
